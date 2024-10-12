@@ -1,9 +1,9 @@
 # To install:
 
-git clone https://github.com/nilay1400/quanto-modified.git
+1. git clone https://github.com/nilay1400/quanto-modified.git
 
-cd quanto
+2. cd quanto
 
-./setup.sh
+3. ./setup.sh
 
-pip install .
+4. pip install .
