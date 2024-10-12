@@ -30,8 +30,8 @@ class MaxOptimizer(AffineOptimizer):
         dim = list(range(1, base.ndim)) if (axis == 0) else list(range(0, base.ndim - 1))
         rmin = torch.amin(base, dim=dim, keepdim=True)
         rmax = torch.amax(base, dim=dim, keepdim=True)
-        qmin = 40
-        qmax = 70
+        qmin = 0
+        qmax = 7
         scale = (rmax - rmin) / (qmax - qmin)
         zeropoint = torch.round((-rmin / scale)+qmin).to(torch.int8)
         #print("scale=", scale)
